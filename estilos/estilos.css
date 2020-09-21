@@ -137,6 +137,14 @@ footer{
     padding: 1.5rem 3rem;
 }
 
+input[type=text], option{
+    font-size: 2rem;
+}
+
+.select{
+    font-size: 2rem;
+}
+
 /* CONTACTO */
 .h2__contacto{
     font-size: 3rem;
