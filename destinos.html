@@ -70,6 +70,7 @@
     <section class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-8 m-4 ">
+                <h2> Paquetes Destacados </h2>
                 <div class="card" id="brasil">
                     <div class="row no-gutters">
                         <div class="col-sm-5">
@@ -140,7 +141,7 @@
                                     <br>
                                     AR$ 37.560
                                 </p>
-                                <button onclick="paris()" class="btn boton">Elegir</button>
+                                <button type="submit" class="btn boton">Elegir</button>
                             </div>
                         </div>
                     </div>
@@ -148,45 +149,45 @@
             </div>
 
             <div class="col-12 col-md-3">
-                <form class="form__viaje"> 
+                <form class="form__viaje" id="comprarViaje"> 
                     <div class="form-group">
+                        <label for="destino">Pais</label>
+                        <select class="form-control select" id="pais">
+                            <option value="">-- Seleccionar --</option>
+                        </select>
+
                         <label for="destino">Destino</label>
-                        <input type="text" class="form-control" id="destiny" value="">
+                        <select class="form-control select" id="destino">
+                            <option value="">-- Seleccionar --</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="start">Fecha Ida:</label>
 
                         <input type="date" id="start" name="trip-start"
                             value="2021-01-01"
-                            min="2021-01-01" max="2022-12-31">
+                            min="2021-01-01" max="2022-12-31" >
                     </div>
                     <div class="form-group">
                         <label for="start">Fecha Vuelta:</label>
 
                         <input type="date" id="end" name="trip-start"
                             value="2021-01-01"
-                            min="2021-01-01" max="2022-12-31">
+                            min="2021-01-01" max="2022-12-31" >
                     </div>
                     <div class="form-group">
                         <label for="pasajeros">Cantidad de Pasajeros</label>
-                        <select class="form-control select" id="pasajeros">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
+                        <input type="text" class="form-control" id="pasaj">
                     </div>
                     <div class="form-group">
-                        <label for="categoria">Categoria</label>
-                        <select class="form-control select" id="categoria">
-                            <option>Classic</option>
-                            <option>Business</option>
-                        </select>
+                        <label for="categoria">Classic</label>
+                        <input type="radio" name="categoria" id="catClassic" value="Classic" checked>
+                        <label for="categoria">Business</label>
+                        <input type="radio" name="categoria" id="catBusiness" value="Business">
                     </div>
 
                     <h4 id="totalCompra"></h4>
-                    <button class="btn botonComprar">Comprar</button>
+                    <button onclick="botonComprarViaje()" class="btn botonComprar">Comprar</button>
                 </form>
             </div>
         </div>

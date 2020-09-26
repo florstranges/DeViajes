@@ -1,86 +1,107 @@
-// Objeto Viaje
+// INFORMACION
+const dondeViajo = [
+    {
+        "pais": "Brasil",
+        "destino": "Rio de Janeiro",
+        "precio": 19401 
+    },
+    {
+        "pais": "Estados Unidos",
+        "destino": "New York",
+        "precio": 80335
+    },
+    {
+        "pais": "Europa",
+        "destino": "Paris",
+        "precio": 37560
+    },
+    {
+        "pais": "Brasil",
+        "destino": "Florianópolis",
+        "precio": 22045 
+    },
+    {
+        "pais": "Estados Unidos",
+        "destino": "Miami",
+        "precio": 75425
+    },
+    {
+        "pais": "Brasil",
+        "destino": "Porto Seguro",
+        "precio": 32145
+    }
+]
 
-function viaje(destino, fechaIda, fechaVuelta, cantPasajeros, categoria, precio) {
-    this.destino = destino;
-    this.fechaIda = fechaIda;
-    this.fechaVuelta = fechaVuelta;
-    this.cantPasajeros = cantPasajeros;
-    this.categoria = categoria;
-    this.precio = precio;
+// Convertir a JSON
+var jsonViaje = JSON.stringify(dondeViajo)
+
+// Transformo mi JSON a Objeto Arreglo
+var objetoJson = JSON.parse(jsonViaje)
+
+
+// Constructor Viaje
+class viaje {
+    constructor(pais, destino, fechaIda, fechaVuelta, cantPasajeros, categoria, precio) {
+        this.pais = pais;
+        this.destino = destino;
+        this.fechaIda = fechaIda;
+        this.fechaVuelta = fechaVuelta;
+        this.cantPasajeros = cantPasajeros;
+        this.categoria = categoria;
+        this.precio = precio;
+    }
+
+
+}
+
+document.addEventListener('DOMContentLoaded', cargarDestinos);
+
+// Cargar informacion al select
+function cargarDestinos(){
+
+    const selectPais = document.querySelector('#pais');
+    const selectDestino = document.querySelector('#destino');
+
+    const paises = crearListado(dondeViajo, "pais");
+
+    cargarSelect(paises, selectPais);
+
+    selectPais.addEventListener('change', function (e){
+        selectDestino.innerHTML = '<option value=""> -- Seleccionar -- </opcion>';
+
+        const destinos = dondeViajo.filter(elem => elem.pais.toLocaleLowerCase().replace(' ', '-') == e.target.value);
+
+        const listaDestinos = crearListado(destinos, "destino");
+
+        cargarSelect(listaDestinos, selectDestino)
+    });
+
+    const comprar = document.querySelector('#comprarViaje');
+	formulario.addEventListener('submit', botonComprarViaje);
 }
 
 
-// Definir Variables
-// Ejemplo Rio de Janeiro
+// Genero listado para los select
+function crearListado(array, parametro) {
+	const listado = [];
 
-var destino = "Rio de Janeiro";
-
-var diaIda = 5;
-var mesIda = 04;
-var anioIda = 2021;
-var fechaIda = [];
-fechaIda = fechaIda.concat(diaIda, mesIda, anioIda);
-
-var diaVuelta = diaIda + 15;
-var fechaVuelta = [];
-fechaVuelta = fechaVuelta.concat(diaVuelta, mesIda, anioIda);
-
-var cantPasajeros = 2;
-
-var categoria = "Business";
-
-var precio = 19401
-
-
-// Carga de objeto Brasil 
-
-var brasil = new viaje (destino, fechaIda, fechaVuelta, cantPasajeros, categoria, precio);
-
-console.log(brasil);
-
-// Desafio 08 - Interaccion con HTML
-
-function rioDeJaneiro () {
-    document.querySelector('#destiny').value = "Rio de Janeiro";
-    document.querySelector('#start').value = "2021-04-05";
-    document.querySelector('#end').value = "2021-04-20";
-    document.querySelector('#pasajeros').value = "2";
-    document.querySelector('#categoria').value = "Classic";
-    
-    var totalCompra = document.createElement('H4');
-    var monto = document.createTextNode('Total: AR$ 19.401');
-    totalCompra.appendChild(monto);
-
-    var total = document.querySelector('#totalCompra');
-    total.insertBefore(totalCompra, total.childNodes[6]);
+	array.forEach(elemento => {
+		if (!listado.includes(elemento[parametro])) {
+			listado.push(elemento[parametro]);
+		}
+	})
+	return listado.sort();
 }
 
-function newYork () {
-    document.querySelector('#destiny').value = "New York";
-    document.querySelector('#start').value = "2021-05-17";
-    document.querySelector('#end').value = "2021-05-28";
-    document.querySelector('#pasajeros').value = "1";
-    document.querySelector('#categoria').value = "Business";
-    
-    var totalCompra = document.createElement('H4');
-    var monto = document.createTextNode('Total: AR$ 80.335');
-    totalCompra.appendChild(monto);
-
-    var total = document.querySelector('#totalCompra');
-    total.insertBefore(totalCompra, total.childNodes[6]);
+// Cargo contenido en los Select
+function cargarSelect(array, select) {
+	array.forEach(element => {
+		let option = document.createElement('option');
+		option.value = element.toLowerCase().replace(' ', '-');
+		option.textContent = element;
+		select.appendChild(option);
+	})
 }
 
-function paris () {
-    document.querySelector('#destiny').value = "Paris";
-    document.querySelector('#start').value = "2021-04-03";
-    document.querySelector('#end').value = "2021-04-12";
-    document.querySelector('#pasajeros').value = "2";
-    document.querySelector('#categoria').value = "Classic";
 
-    var totalCompra = document.createElement('H4');
-    var monto = document.createTextNode('Total: AR$ 37.560');
-    totalCompra.appendChild(monto);
 
-    var total = document.querySelector('#totalCompra');
-    total.insertBefore(totalCompra, total.childNodes[6]);
-}
