@@ -38,6 +38,8 @@ var jsonViaje = JSON.stringify(dondeViajo)
 // Transformo mi JSON a Objeto Arreglo
 var objetoJson = JSON.parse(jsonViaje)
 
+// Guardandolo en el storage
+localStorage.setItem('viaje', cargarDatos);
 
 // Constructor Viaje
 class viaje {
@@ -54,9 +56,9 @@ class viaje {
 
 }
 
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', cargarDatos);
     //Cargando datos del viaje
-
+function cargarDatos(){
         // Variales del proyecto
         const selectPais = document.querySelector('#pais');
         const selectDestino = document.querySelector('#destino');
@@ -148,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function(){
             sumaTotal.classList.add('sumatotal');
 
         }
-});
+};
 
 
 
