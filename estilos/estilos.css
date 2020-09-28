@@ -127,6 +127,11 @@ footer{
 .precio{
     font-size: 2.5rem;
     font-weight: 700;
+    text-align: right;
+}
+.persona{
+    font-size: 1.2rem;
+    text-align: right;
 }
 
 .boton{
@@ -139,11 +144,22 @@ footer{
 .botonComprar{
     background-color: #9ceb04;
     color: #fff;
-    font-size: 2rem;
-    padding: 1.5rem 3rem;
+    font-size: 2.5rem;
+    padding: 1.5rem 5rem;
+    display: flex;
+    margin: auto;
 }
 
-input[type=text], option{
+.botonComprar2{
+    background-color: #9ceb04;
+    color: #fff;
+    font-size: 1.5rem;
+    display: flex;
+    margin:auto;
+    padding: 1rem 2rem;
+}
+
+input[type=text], input[type=number], option{
     font-size: 2rem;
 }
 
@@ -152,6 +168,27 @@ input[type=text], option{
     
 }
 
+.total{
+    margin: 2rem 0;
+    text-align: center;
+}
+.sub{
+    text-decoration: underline;
+}
+.sub2{
+    text-decoration: underline;
+    margin-top: 2rem;
+}
+
+.sumatotal{
+    font-size: 2.5rem;
+}
+.resumen{
+    font-size: 1.5rem;
+    text-align: left;
+    font-style: italic;
+    text-transform: uppercase;
+}
 /* CONTACTO */
 .h2__contacto{
     font-size: 3rem;

@@ -86,11 +86,11 @@
                                     05/04/2021 - 20/04/2021 <br>
 
                                     Ida y Vuelta</p>
-                                <p class="card-text text-right precio">Precio Final
-                                    <br>
-                                    AR$ 19.401
-                                </p>
-                                <buttonclass="btn boton">Elegir</button>
+                                <p class="card-text precio m-0">Precio Final</p>
+                                <p class="precio m-0">AR$ 19.401</p>
+                                <p class="persona m-0">Precio final por persona</p>
+
+                                <button class="btn boton">Elegir</button>
                             </div>
                         </div>
                     </div>
@@ -109,13 +109,12 @@
 
                                     Desde Buenos Aires(BUE) <br>
 
-                                    17/05/2021 - 28/05/2021 <br>
+                                    15/05/2021 - 30/05/2021 <br>
 
                                     Ida y Vuelta</p>
-                                <p class="card-text text-right precio">Precio Final
-                                    <br>
-                                    AR$ 80.335
-                                </p>
+                                <p class="card-text precio m-0">Precio Final</p>
+                                <p class="precio m-0">AR$ 80.335</p>
+                                <p class="persona m-0">Precio final por persona</p>
                                 <butto class="btn boton">Elegir</button>
                             </div>
                         </div>
@@ -134,13 +133,12 @@
 
                                     Desde Buenos Aires(BUE) <br>
 
-                                    03/04/2021 - 12/04/2021 <br>
+                                    03/04/2021 - 18/04/2021 <br>
 
                                     Ida y Vuelta</p>
-                                <p class="card-text text-right precio">Precio Final
-                                    <br>
-                                    AR$ 37.560
-                                </p>
+                                <p class="card-text precio m-0">Precio Final</p>
+                                <p class="precio m-0">AR$ 37.560</p>
+                                <p class="persona m-0">Precio final por persona</p>
                                 <button class="btn boton">Elegir</button>
                             </div>
                         </div>
@@ -165,35 +163,40 @@
                         <label for="start">Fecha Ida:</label>
 
                         <input type="date" id="start" name="trip-start"
-                            value="2021-01-01"
-                            min="2021-01-01" max="2022-12-31" >
+                            value="" min="2021-01-01" max="2022-12-31" >
                     </div>
                     <div class="form-group">
                         <label for="start">Fecha Vuelta:</label>
 
                         <input type="date" id="end" name="trip-start"
-                            value="2021-01-01"
-                            min="2021-01-01" max="2022-12-31" >
+                            value="" min="2021-01-01" max="2022-12-31" >
                     </div>
                     <div class="form-group">
                         <label for="pasajeros">Cantidad de Pasajeros</label>
-                        <input type="text" class="form-control" id="pasaj">
+                        <input type="number" min="0" placeholder="0" class="form-control" id="pasaj">
                     </div>
                     <div class="form-group">
-                        <label for="categoria">Classic</label>
-                        <input type="radio" name="categoria" id="catClassic" value="Classic" checked>
-                        <label for="categoria">Business</label>
-                        <input type="radio" name="categoria" id="catBusiness" value="Business">
+                        <label for="categoria">Categoria</label>
+                        <select class="form-control select" id="selectCategoria">
+                            <option value="">-- Seleccionar --</option>
+                            <option value="Classic">Classic</option>
+                            <option value="Business">Business</option>
+                        </select>
                     </div>
+                    
+                    <button type="submit" class="btn botonComprar2" id="btnCalcular">Calcular Viaje</button>
 
-                    <h4 id="totalCompra"></h4>
-                    <button type="submit" class="btn botonComprar">Comprar</button>
+                    <div class="total">
+                        <h4 class="sub"> Resumen: </h4>
+                        <div id="listaViaje"></div>
+
+                        <h4 class="sub2"> Total: </h4>
+                        <div id="sumaTotal"></div>
+
+                        <input type="submit" value="Pagar" id="btnComprarViaje" class="btn botonComprar">
+                    </div>
                 </form>
             </div>
-        </div>
-
-        <div class="col-12 col-md-4">
-        </div>
         </div>
     </section>
 
