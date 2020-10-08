@@ -24,18 +24,7 @@ body {
 }
 .menuLg{
     flex-direction: row;
-    justify-content: space-around;
-}
-.botonMillas{
-    background-color: #9ceb04;
-    border-radius: 5rem;
-    padding: 1.5rem;
-    border: none;
-    margin: 2rem;
-}
-.botonMillas a{
-    color: #fff;
-    text-transform: uppercase;
+    justify-content: space-evenly;
 }
 .menuLg ul{
     align-self: center;
@@ -49,9 +38,55 @@ body {
     font-weight: 600;
 }
 
-.active{
-    text-decoration: underline;
+/* Slide Menu */
+.fa-plane{
+    cursor: pointer;
+    color:white;
+    font-size: 2.5rem;
+    padding: 1.5rem;
+    margin: auto;
 }
+.menu-wrap {
+    position: fixed;
+    right: 0;
+    z-index: 1001;
+    width: 300px;
+    height: 100%;
+    padding: 40px;
+    background-color: #9ceb04;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    transition: all 0.5s cubic-bezier(0.7,0,0.3,1);
+    transform: translate3d(360px,0,0);
+}
+.menu-wrap.active {
+    transform: translate3d(0px,0,0);
+}
+
+  /* Buttons */
+.menu-button, 
+.close-button {
+    position: fixed;
+    top: 50px;
+    width: 50px;
+    height: 50px;
+    background-color: #9ceb04;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+.menu-button {
+    right: 0px;
+    z-index: 102;
+}
+.close-button {
+    left: -50px;
+    z-index: 100;
+}
+/* Fin Slide Menu */
+
+
 .dropdown-menu{
     font-size: 2rem;
 }
@@ -99,10 +134,12 @@ footer{
     text-decoration: underline;
     font-weight: 700;
 }
-.form__viaje{
+.fondoForm{
     background-color: #4ca4e3 ;
     border-radius: 2rem;
     padding: 2rem;
+}
+.form__viaje{
     font-size: 2rem;
     font-weight: 800;
     margin-top: 3rem;
@@ -142,7 +179,7 @@ footer{
 }
 
 .botonComprar{
-    background-color: #9ceb04;
+    background-color: #4ca4e3;
     color: #fff;
     font-size: 2.5rem;
     padding: 1.5rem 5rem;
