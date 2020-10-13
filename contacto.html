@@ -17,6 +17,7 @@
         rel="stylesheet">
 
     <script defer src="js/main.js"></script>
+    <script defer src="js/formspree.js"></script>
 
 </head>
 
@@ -67,28 +68,24 @@
             <div class="col-12 col-md-6">
                 <h2 class="h2__contacto">Envianos tu mensaje</h2>
 
-                <form class="form__contacto">
+                <form class="form__contacto" id="my-form" action="https://formspree.io/f/xdopegwz" method="POST">
                     <div class="form-group">
                         <label for="exampleInputText1">Nombre y Apellido</label>
-                        <input type="text" class="form-control" id="exampleInputText1">
+                        <input type="text" name="name" class="form-control" id="exampleInputText1">
                     </div>
 
                     <div class="form-group">
                         <label for="exampleInputEmail1">Correo</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <input type="text" name="_replyto" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
 
                     <div class="form-group">
                         <label for="exampleInputText2">Asunto</label>
-                        <input type="text" class="form-control" id="exampleInputText2">
+                        <input type="textarea" name="message" class="form-control" id="exampleInputText2">
                     </div>
 
-                    <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Mensaje</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <button type="submit" class="btn btn-primary" id="my-form-button" >Enviar</button>
+                    <p id="my-form-status"></p>
                 </form>
             </div>
         </div>
