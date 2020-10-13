@@ -3,10 +3,12 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+}
 
 html {
-    font-size: 62.5%; }
+    font-size: 62.5%;
+}
 
 body {
     font-family: "Nunito", sans-serif;
@@ -16,36 +18,42 @@ body {
 
 /* INDEX */
 
-.header__logo{
+.header__logo {
     text-align: center;
 }
-.logoMenu{
+
+.logoMenu {
     width: 40%;
 }
-.menuLg{
+
+.menuLg {
     flex-direction: row;
     justify-content: space-evenly;
 }
-.menuLg ul{
+
+.menuLg ul {
     align-self: center;
 }
-.menuLg li{
+
+.menuLg li {
     margin: 2rem 2rem 0 2rem;
 }
-.menuLg li a{
+
+.menuLg li a {
     color: #000;
     text-transform: uppercase;
     font-weight: 600;
 }
 
 /* Slide Menu */
-.fa-plane{
+.fa-plane {
     cursor: pointer;
-    color:white;
+    color: white;
     font-size: 2.5rem;
     padding: 1.5rem;
     margin: auto;
 }
+
 .menu-wrap {
     position: fixed;
     right: 0;
@@ -54,16 +62,17 @@ body {
     height: 100%;
     padding: 40px;
     background-color: #9ceb04;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    transition: all 0.5s cubic-bezier(0.7,0,0.3,1);
-    transform: translate3d(360px,0,0);
-}
-.menu-wrap.active {
-    transform: translate3d(0px,0,0);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+    transform: translate3d(360px, 0, 0);
 }
 
-  /* Buttons */
-.menu-button, 
+.menu-wrap.active {
+    transform: translate3d(0px, 0, 0);
+}
+
+/* Buttons */
+.menu-button,
 .close-button {
     position: fixed;
     top: 50px;
@@ -74,111 +83,123 @@ body {
     border: none;
     outline: none;
     cursor: pointer;
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
+
 .menu-button {
     right: 0px;
     z-index: 102;
 }
+
 .close-button {
     left: -50px;
     z-index: 100;
 }
+
 /* Fin Slide Menu */
 
 
-.dropdown-menu{
+.dropdown-menu {
     font-size: 2rem;
 }
 
-.imagenFondo img{
+.imagenFondo img {
     width: 100%;
 }
-.ofertas{
+
+.ofertas {
     background-color: #9ceb04;
 }
-.ofertas h2{
+
+.ofertas h2 {
     font-size: 6rem;
     text-align: center;
     font-weight: 700;
     color: #fff;
 }
 
-footer{
+footer {
     background-color: #4ca4e3;
     color: #fff;
 }
-.footerImagen{
+
+.footerImagen {
     text-align: end;
     align-self: center;
 }
-.footerImagen img{
+
+.footerImagen img {
     width: 15%;
 }
 
 /* NOSOTROS */
-.bold{
+.bold {
     font-weight: 700;
 }
-.bolder{
+
+.bolder {
     font-weight: 800;
 }
-.textoNosotros p{
+
+.textoNosotros p {
     margin: 30px 0;
 }
 
 /* DESTINOS */
-.paquetes{
+.paquetes {
     font-size: 5rem;
     text-align: center;
     text-decoration: underline;
     font-weight: 700;
 }
-.fondoForm{
-    background-color: #4ca4e3 ;
+
+.fondoForm {
+    background-color: #4ca4e3;
     border-radius: 2rem;
     padding: 2rem;
 }
-.form__viaje{
+
+.form__viaje {
     font-size: 2rem;
     font-weight: 800;
     margin-top: 3rem;
 }
 
-.form__viaje h4{
+.form__viaje h4 {
     font-size: 3rem;
     font-weight: 800;
 }
 
-.card{
+.card {
     border: 2px solid #9ceb04;
     border-radius: 3rem;
-    margin:2rem;
+    margin: 2rem;
 }
 
-.card h2{
+.card h2 {
     font-size: 4rem;
     font-weight: 800;
 }
 
-.precio{
+.precio {
     font-size: 2.5rem;
     font-weight: 700;
     text-align: right;
 }
-.persona{
+
+.persona {
     font-size: 1.2rem;
     text-align: right;
 }
 
-.boton{
+.boton {
     background-color: #4ca4e3;
     color: #fff;
     font-size: 2rem;
     padding: 1.5rem 3rem;
 }
 
-.botonComprar{
+.botonComprar {
     background-color: #4ca4e3;
     color: #fff;
     font-size: 2.5rem;
@@ -187,69 +208,475 @@ footer{
     margin: auto;
 }
 
-.botonComprar2{
+.botonComprar2 {
     background-color: #9ceb04;
     color: #fff;
     font-size: 1.5rem;
     display: flex;
-    margin:auto;
+    margin: auto;
     padding: 1rem 2rem;
 }
 
-input[type=text], input[type=number], option{
+input[type=text],
+input[type=number],
+option {
     font-size: 2rem;
 }
 
-.select{
+.select {
     font-size: 2rem;
-    
+
 }
 
-.total{
+.total {
     margin: 2rem 0;
     text-align: center;
 }
-.sub{
+
+.sub {
     text-decoration: underline;
 }
-.sub2{
+
+.sub2 {
     text-decoration: underline;
     margin-top: 2rem;
 }
 
-.sumatotal{
+.sumatotal {
     font-size: 2.5rem;
 }
-.resumen{
+
+.resumen {
     font-size: 1.5rem;
     text-align: left;
     font-style: italic;
     text-transform: uppercase;
 }
+
 /* CONTACTO */
-.h2__contacto{
+.h2__contacto {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 3rem;
 }
 
-.form__contacto input{
+.form__contacto input {
     font-size: 2rem;
 }
-.form__contacto textarea{
+
+.form__contacto textarea {
     font-size: 2rem;
 }
-.form__contacto input:focus{
+
+.form__contacto input:focus {
     background-color: #4ca4e371;
 }
-.form__contacto textarea:focus{
+
+.form__contacto textarea:focus {
     background-color: #4ca4e371;
 }
-.form__contacto button[type=submit]{
+
+.form__contacto button[type=submit] {
     font-size: 2rem;
     color: white;
     padding: 16px 32px;
     text-decoration: none;
     margin: 4px 2px;
     cursor: pointer;
+}
+
+/* Tarjeta de Credito y Modal */
+.modal-content {
+    background-color: #9ceb04;
+    height: 420px;
+    border-radius: 20px;
+}
+
+.modal-content.active {
+    height: 910px;
+    border-radius: 20px;
+}
+
+/* ---------- Estilos Generales de las Tarjetas ----------*/
+.tarjeta {
+    width: 100%;
+    max-width: 550px;
+    position: relative;
+    color: #fff;
+    transition: .3s ease all;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.tarjeta.active {
+    transform: rotateY(180deg);
+}
+
+.tarjeta>div {
+    padding: 30px;
+    border-radius: 15px;
+    min-height: 315px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 10px 0 rgba(90, 116, 148, 0.3);
+}
+
+/* ---------- Tarjeta Delantera ----------*/
+
+.tarjeta .delantera {
+    width: 100%;
+    background: url(../multimedia/bg-tarjeta-03.jpg);
+    background-size: cover;
+}
+
+.delantera .logo-marca {
+    text-align: right;
+    min-height: 50px;
+}
+
+.delantera .logo-marca img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 80px;
+}
+
+.delantera .chip {
+    width: 100%;
+    max-width: 50px;
+    margin-bottom: 20px;
+}
+
+.delantera .grupo .label {
+    font-size: 16px;
+    color: #7d8994;
+    margin-bottom: 5px;
+}
+
+.delantera .grupo .numero,
+.delantera .grupo .nombre,
+.delantera .grupo .expiracion {
+    color: #fff;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.delantera .flexbox {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* ---------- Tarjeta Trasera ----------*/
+.trasera {
+    background: url(../multimedia/bg-tarjeta-03.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.trasera .barra-magnetica {
+    height: 40px;
+    background: #000;
+    width: 100%;
+    position: absolute;
+    top: 30px;
+    left: 0;
+}
+
+.trasera .datos {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.trasera .datos p {
+    margin-bottom: 5px;
+}
+
+.trasera .datos #firma {
+    width: 70%;
+}
+
+.trasera .datos #firma .firma {
+    height: 40px;
+    background: repeating-linear-gradient(skyblue 0, skyblue 5px, orange 5px, orange 10px);
+}
+
+.trasera .datos #firma .firma p {
+    line-height: 40px;
+    font-family: 'Liu Jian Mao Cao', cursive;
+    color: #000;
+    font-size: 30px;
+    padding: 0 10px;
+    text-transform: capitalize;
+}
+
+.trasera .datos #ccv {
+    width: 20%;
+}
+
+.trasera .datos #ccv .ccv {
+    background: #fff;
+    height: 40px;
+    color: #000;
+    padding: 10px;
+    text-align: center;
+}
+
+.trasera .leyenda {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.trasera .link-banco {
+    font-size: 14px;
+    color: #fff;
+}
+
+/* ---------- Contenedor Boton ----------*/
+.contenedor-btn .btn-abrir-formulario {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 20px;
+    background: #2364d2;
+    color: #fff;
+    position: relative;
+    top: -25px;
+    z-index: 3;
+    border-radius: 100%;
+    box-shadow: -5px 4px 8px rgba(24, 56, 182, 0.4);
+    padding: 5px;
+    transition: all .2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.contenedor-btn .btn-abrir-formulario:hover {
+    background: #1850b1;
+}
+
+.contenedor-btn .btn-abrir-formulario.active {
+    transform: rotate(45deg);
+}
+
+/* ---------- Formulario Tarjeta ----------*/
+.formulario-tarjeta {
+    background: #fff;
+    width: 100%;
+    max-width: 700px;
+    padding: 150px 30px 30px 30px;
+    border-radius: 10px;
+    position: relative;
+    top: -150px;
+    z-index: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path .3s ease-out;
+}
+
+.formulario-tarjeta.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.formulario-tarjeta label {
+    display: block;
+    color: #7d8994;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.formulario-tarjeta input,
+.formulario-tarjeta select,
+.btn-enviar {
+    border: 2px solid #CED6E0;
+    font-size: 18px;
+    height: 50px;
+    width: 100%;
+    padding: 5px 12px;
+    transition: .3s ease all;
+    border-radius: 5px;
+}
+
+.formulario-tarjeta input:hover,
+.formulario-tarjeta select:hover {
+    border: 2px solid #93BDED;
+}
+
+.formulario-tarjeta input:focus,
+.formulario-tarjeta select:focus {
+    outline: rgb(4, 4, 4);
+    box-shadow: 1px 7px 10px -5px rgba(90, 116, 148, 0.3);
+}
+
+.formulario-tarjeta input {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.formulario-tarjeta .flexbox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.formulario-tarjeta .expira {
+    width: 100%;
+}
+
+.formulario-tarjeta .ccv {
+    min-width: 100px;
+}
+
+.formulario-tarjeta .grupo-select {
+    width: 100%;
+    margin-right: 15px;
+    position: relative;
+}
+
+.formulario-tarjeta select {
+    -webkit-appearance: none;
+}
+
+.formulario-tarjeta .grupo-select i {
+    position: absolute;
+    color: #CED6E0;
+    top: 18px;
+    right: 15px;
+    transition: .3s ease all;
+}
+
+.formulario-tarjeta .grupo-select:hover i {
+    color: #93bfed;
+}
+
+.formulario-tarjeta .btn-enviar {
+    border: none;
+    padding: 10px;
+    font-size: 22px;
+    color: #fff;
+    background: #2364d2;
+    box-shadow: 2px 2px 10px 0px rgba(0, 85, 212, 0.4);
+    cursor: pointer;
+}
+
+.formulario-tarjeta .btn-enviar:hover {
+    background: #1850b1;
+}
+
+/* Giro y pago aceptado */
+#resultado  {
+    margin-top: 20px;
+}
+#resultado div p {
+    text-align: center;
+    color: #4ca4e3;
+    font-size: 3rem;
+}
+#cargando {
+    display: none;
+    justify-content: center;
+    margin: 25px;
+}
+.sk-chase {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 10px;
+    animation: sk-chase 2.5s infinite linear both;
+}
+.sk-chase-dot {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: sk-chase-dot 2.0s infinite ease-in-out both;
+}
+
+.sk-chase-dot:before {
+    content: '';
+    display: block;
+    width: 25%;
+    height: 25%;
+    background-color: #9ceb04;
+    border-radius: 100%;
+    animation: sk-chase-dot-before 2.0s infinite ease-in-out both;
+}
+
+.sk-chase-dot:nth-child(1) {
+    animation-delay: -1.1s;
+}
+
+.sk-chase-dot:nth-child(2) {
+    animation-delay: -1.0s;
+}
+
+.sk-chase-dot:nth-child(3) {
+    animation-delay: -0.9s;
+}
+
+.sk-chase-dot:nth-child(4) {
+    animation-delay: -0.8s;
+}
+
+.sk-chase-dot:nth-child(5) {
+    animation-delay: -0.7s;
+}
+
+.sk-chase-dot:nth-child(6) {
+    animation-delay: -0.6s;
+}
+
+.sk-chase-dot:nth-child(1):before {
+    animation-delay: -1.1s;
+}
+
+.sk-chase-dot:nth-child(2):before {
+    animation-delay: -1.0s;
+}
+
+.sk-chase-dot:nth-child(3):before {
+    animation-delay: -0.9s;
+}
+
+.sk-chase-dot:nth-child(4):before {
+    animation-delay: -0.8s;
+}
+
+.sk-chase-dot:nth-child(5):before {
+    animation-delay: -0.7s;
+}
+
+.sk-chase-dot:nth-child(6):before {
+    animation-delay: -0.6s;
+}
+
+@keyframes sk-chase {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes sk-chase-dot {
+
+    80%,
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes sk-chase-dot-before {
+    50% {
+        transform: scale(0.4);
+    }
+
+    100%,
+    0% {
+        transform: scale(1.0);
+    }
 }
