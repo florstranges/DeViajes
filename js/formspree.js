@@ -11,11 +11,11 @@ window.addEventListener("DOMContentLoaded", function () {
     function success() {
         form.reset();
         button.style = "display: none ";
-        status.innerHTML = "Thanks!";
+        status.innerHTML = "Muchas gracias! Nos pondremos en contacto a la brevedad.";
     }
 
     function error() {
-        status.innerHTML = "Oops! There was a problem.";
+        status.innerHTML = "Complete los campos para continuar.";
     }
 
     // handle the form submission event

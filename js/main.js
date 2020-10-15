@@ -156,10 +156,18 @@ function cargarDatos() {
             closeBtn.on("click", function () {
                 menu.removeClass("active");
             });
+
+            var openBtn2 = $("#openBtn2");
+            openBtn2.on('click', function () {
+                menu.addClass('active');
+                menu.show(storage);
+            })
         })(jQuery);
 
         var nuevoViaje = new viaje(paisEleg, destinoEleg, fechaIdaEleg, fechaVueltaEleg, cantidadPasajeros, categEleg, totalPagar);
         localStorage.setItem('viaje', JSON.stringify(nuevoViaje));
+
+        var storage = JSON.parse(localStorage.getItem('viaje'));
 
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -294,7 +302,7 @@ function cargarDatos() {
         });
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         const botonFinalizar = document.querySelector('#btn-finalizar');
-        
+
         botonFinalizar.addEventListener('click', function () {
             const div = document.createElement('div');
             div.classList.add('mt-10', 'text-left');
@@ -338,19 +346,3 @@ function cargarSelect(array, select) {
         select.appendChild(option);
     })
 }
-
-
-/* var botonBrasil = document.querySelector('#botonBrasil');
-botonBrasil.addEventListener('click', paquetes('Brasil', 'Rio de Janeiro'));
-
-
-function paquetes(p, d, fI, fV, pA, c, pR){
-    selectPais = p;
-    selectDestino = d;
-    calendarioIda = fI;
-    calendarioVuelta = fV;
-    selectPasajeros = pA;
-    selectCategoria = c;
-    pR
-}
-*/
