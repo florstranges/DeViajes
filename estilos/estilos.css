@@ -327,7 +327,7 @@ option {
 
 .tarjeta .delantera {
     width: 100%;
-    background: url(../multimedia/bg-tarjeta-03.jpg);
+    background: url(../multimedia/bg-tarjeta-05.jpg);
     background-size: cover;
 }
 
@@ -371,7 +371,7 @@ option {
 
 /* ---------- Tarjeta Trasera ----------*/
 .trasera {
-    background: url(../multimedia/bg-tarjeta-03.jpg);
+    background: url(../multimedia/bg-tarjeta-05.jpg);
     background-size: cover;
     position: absolute;
     top: 0;

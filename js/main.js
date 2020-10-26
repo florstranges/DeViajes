@@ -46,6 +46,29 @@ class viaje {
     }
 }
 
+
+// Genero listado para los select
+function crearListado(array, parametro) {
+    const listado = [];
+
+    array.forEach(elemento => {
+        if (!listado.includes(elemento[parametro])) {
+            listado.push(elemento[parametro]);
+        }
+    })
+    return listado.sort();
+}
+
+// Cargo contenido en los Select
+function cargarSelect(array, select) {
+    array.forEach(element => {
+        let option = document.createElement('option');
+        option.value = element.toLowerCase().replace(' ', '-');
+        option.textContent = element;
+        select.appendChild(option);
+    })
+}
+
 document.addEventListener('DOMContentLoaded', cargarDatos);
 //Cargando datos del viaje
 function cargarDatos() {
@@ -164,13 +187,14 @@ function cargarDatos() {
             })
         })(jQuery);
 
+        // Nuevo viaje se guarda en LocalStorage
         var nuevoViaje = new viaje(paisEleg, destinoEleg, fechaIdaEleg, fechaVueltaEleg, cantidadPasajeros, categEleg, totalPagar);
         localStorage.setItem('viaje', JSON.stringify(nuevoViaje));
 
         var storage = JSON.parse(localStorage.getItem('viaje'));
 
 
-        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //-------------------------------------------------------------------------------------//
 
         // Modal pago y TC
         const tarjeta = document.querySelector('#tarjeta'),
@@ -185,26 +209,26 @@ function cargarDatos() {
             modalContent = document.querySelector('#modal-content');
         ccv = document.querySelector('#tarjeta .ccv');
 
-        // * Volteamos la tarjeta para mostrar el frente.
+        // Voltear tarjeta
         const mostrarFrente = () => {
             if (tarjeta.classList.contains('active')) {
                 tarjeta.classList.remove('active');
             }
         }
 
-        // * Rotacion de la tarjeta
+        // Rotacion de la tarjeta
         tarjeta.addEventListener('click', () => {
             tarjeta.classList.toggle('active');
         });
 
-        // * Boton de abrir formulario
+        // Boton de abrir formulario
         btnAbrirFormulario.addEventListener('click', () => {
             btnAbrirFormulario.classList.toggle('active');
             formulario.classList.toggle('active');
             modalContent.classList.toggle('active');
         });
 
-        // * Select del mes generado dinamicamente.
+        // Select del mes
         for (let i = 1; i <= 12; i++) {
             let opcion = document.createElement('option');
             opcion.value = i;
@@ -212,7 +236,7 @@ function cargarDatos() {
             formulario.selectMes.appendChild(opcion);
         }
 
-        // * Select del año generado dinamicamente.
+        // Select del año 
         const yearActual = new Date().getFullYear();
         for (let i = yearActual; i <= yearActual + 8; i++) {
             let opcion = document.createElement('option');
@@ -221,7 +245,7 @@ function cargarDatos() {
             formulario.selectYear.appendChild(opcion);
         }
 
-        // * Input numero de tarjeta
+        // Input numero de tarjeta
         formulario.inputNumero.addEventListener('keyup', (e) => {
             let valorInput = e.target.value;
 
@@ -300,7 +324,9 @@ function cargarDatos() {
 
             ccv.textContent = formulario.inputCCV.value;
         });
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //----------------------------------------------------------------------------------//
+        
         const botonFinalizar = document.querySelector('#btn-finalizar');
 
         botonFinalizar.addEventListener('click', function () {
@@ -324,25 +350,3 @@ function cargarDatos() {
     }
 }
 
-
-// Genero listado para los select
-function crearListado(array, parametro) {
-    const listado = [];
-
-    array.forEach(elemento => {
-        if (!listado.includes(elemento[parametro])) {
-            listado.push(elemento[parametro]);
-        }
-    })
-    return listado.sort();
-}
-
-// Cargo contenido en los Select
-function cargarSelect(array, select) {
-    array.forEach(element => {
-        let option = document.createElement('option');
-        option.value = element.toLowerCase().replace(' ', '-');
-        option.textContent = element;
-        select.appendChild(option);
-    })
-}
